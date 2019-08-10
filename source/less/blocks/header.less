@@ -1,0 +1,27 @@
+.header__toggle {
+    display: none;
+}
+
+.header__lists-wrapper {
+    display: none;
+}
+
+@media (min-width: @tablet-width) {
+    .header__lists-wrapper {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        justify-content: flex-end;
+        width: 790px;
+        padding: 0 15px;
+        margin: 0 auto -60px auto;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .header__lists-wrapper {
+        width: 1170px;
+        margin: 0 auto -70px auto;
+    }
+}

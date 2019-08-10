@@ -1,0 +1,122 @@
+.main {
+    position: relative;
+
+    background-color: @bg-introduction;
+    background-image: url("../img/bg/sochi-bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 415px;
+        left: 50%;
+        margin-left: -26.5px;
+
+        width: 53px;
+        height: 230px;
+
+        background-image: url("../img/route.svg");
+        background-repeat: no-repeat;
+    }
+}
+
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__logo {
+    margin: 30px 0 0 0;
+}
+
+.main__header {
+    display: flex;
+    flex-direction: column;
+    max-width: 260px;
+    margin: 0 0 50px 0;
+
+    font-size: 20px;
+    line-height: 48px;
+    color: @bg-main-menu;
+    text-align: center;
+}
+
+.main__header-highlight {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.main__btn {
+    margin-bottom: 210px;
+}
+
+@media (min-width: @tablet-width) {
+    .main {
+        background-image: url("../img/bg/sochi-bg-tablet.jpg");
+
+        &::after{
+            top: 435px;
+        }
+    }
+
+    .main__wrapper {
+        width: 790px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    .main__logo {
+        margin: 145px 0 0 0;
+    }
+
+    .main__header {
+        max-width: unset;
+        margin: 0 0 30px 0;
+
+        font-size: 26px;
+    }
+
+    .main__header-highlight {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 15px;
+
+        font-size: 72px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .main {
+        background-image: url("../img/bg/sochi-bg-desktop.jpg");
+
+        &::after{
+            top: 450px;
+        }
+    }
+
+    .main__wrapper {
+        width: 1170px;
+    }
+
+    .main__logo {
+        margin: 85px 0 0 0;
+    }
+
+    .main__header {
+        margin: 0 0 70px 0;
+
+        font-size: 36px;
+    }
+
+    .main__header-highlight {
+        margin-top: 50px;
+
+        font-size: 100px;
+    }
+
+    .main__btn {
+        margin-bottom: 195px;
+    }
+}

@@ -1,0 +1,27 @@
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 15px 50px;
+
+    font-family: "Raleway", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: @white;
+
+    border: 2.5px solid @light-blue;
+    background-color: @light-blue;
+
+    &:hover,
+    &:focus {
+        color: @bg-main-menu;
+
+        border-color: @bg-main-menu;
+        background-color: @white;
+    }
+
+    &:active {
+        color: @white;
+
+        background-color: @bg-main-menu;
+    }
+}
