@@ -50,19 +50,124 @@
         </header>
 
         <main class="main">
-            <div class="main__wrapper">
-                <a>
-                    <picture>
-                        <source type="image/webp" media="(min-width: 1170px)" srcset="img/logo-desktop.webp">
-                        <source type="image/webp" srcset="img/logo-mobile.webp">
+            <h1 class="visually-hidden">Сервис по подбору круизов</h1>
 
-                        <source media="(min-width: 1170px)" srcset="img/logo-desktop.png">
-                        <img class="main__logo" src="img/logo-mobile.png" alt="Логотип сервиса по поиску и бронирования круизов" width="70" height="70">
-                    </picture>
-                </a>
-                <h1 class="main__header">Морские прогулки<span class="main__header-highlight">по чёрному морю</span></h1>
-                <a class="button main__btn" href="/">Выбрать круиз</a>
-            </div>
+            <section class="introduction">
+                <div class="introduction__wrapper">
+                    <a>
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1170px)" srcset="img/logo-desktop.webp">
+                            <source type="image/webp" srcset="img/logo-mobile.webp">
+
+                            <source media="(min-width: 1170px)" srcset="img/logo-desktop.png">
+                            <img class="introduction__logo" src="img/logo-mobile.png" alt="Логотип сервиса по поиску и бронирования круизов" width="70" height="70">
+                        </picture>
+                    </a>
+                    <h1 class="introduction__header">Морские прогулки<span class="introduction__header-highlight">по чёрному морю</span></h1>
+                    <a class="button introduction__btn" href="#catalog">Выбрать круиз</a>
+                </div>
+            </section>
+
+            <section class="catalog">
+                <h2 class="catalog__header">Каталог круизов</h2>
+                <a class="catalog__filter-link">Сортировать круизы по цене</a>
+                <ul id="catalog" class="catalog-list">
+                    <li class="catalog-list__item catalog-list__item--hit">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1170px)" srcset="img/lighthouse-desktop.webp">
+                            <source type="image/webp" media="(min-width: 790px)" srcset="img/lighthouse-tablet.webp">
+                            <source type="image/webp" srcset="img/lighthouse-mobile.webp">
+
+                            <source media="(min-width: 1170px)" srcset="img/lighthouse-desktop.jpg">
+                            <source media="(min-width: 790px)" srcset="img/lighthouse-tablet.jpg">
+                            <img class="catalog-list__image" src="img/lighthouse-mobile.jpg" alt="Фотография из круиза в Анапу" width="290" height="228">
+                        </picture>
+                        <div class="catalog-list__description">
+                            <a href="/"><h3 class="catalog-list__title">Морской круиз в&nbsp;Анапу&nbsp;<svg class="catalog-list__svg"><use xlink:href="#icon-arrow-left"></use></svg></h3></a>
+                            <p class="catalog-list__route"><span class="catalog-list__route-title">Маршрут:</span> Сочи-Лазаревское-Геленджик-Анапа</p>
+                            <p class="catalog-list__duration"><span class="catalog-list__duration-title">Продолжительность:</span> 10 ч. 0 мин.</p>
+                            <div class="catalog-list__price-wrapper">
+                                <span class="catalog-list__price">49 000 руб.</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item catalog-list__item--offer">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1170px)" srcset="img/sochi-desktop.webp">
+                            <source type="image/webp" media="(min-width: 790px)" srcset="img/sochi-tablet.webp">
+                            <source type="image/webp" srcset="img/sochi-mobile.webp">
+
+                            <source media="(min-width: 1170px)" srcset="img/sochi-desktop.jpg">
+                            <source media="(min-width: 790px)" srcset="img/sochi-tablet.jpg">
+                            <img class="catalog-list__image" src="img/sochi-mobile.jpg" alt="Фотография из морской прогулки по Сочи" width="290" height="229">
+                        </picture>
+                        <div class="catalog-list__description">
+                            <a href="/"><h3 class="catalog-list__title">Обзорная морская прогулка&nbsp;с&nbsp;экскурсией&nbsp;<svg class="catalog-list__svg"><use xlink:href="#icon-arrow-left"></use></svg></h3></a>
+                            <p class="catalog-list__route"><span class="catalog-list__route-title">Маршрут:</span> Сочи-Адлер-Сочи (без&nbsp;высадки)</p>
+                            <p class="catalog-list__duration"><span class="catalog-list__duration-title">Продолжительность:</span> 1 ч. 0 мин.</p>
+                            <div class="catalog-list__price-wrapper">
+                                <span class="catalog-list__price">5 000 руб.</span>
+                                <del class="catalog-list__old-price">15 000 руб.</del>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item catalog-list__item--discount">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1170px)" srcset="img/gelendzhik-desktop.webp">
+                            <source type="image/webp" media="(min-width: 790px)" srcset="img/gelendzhik-tablet.webp">
+                            <source type="image/webp" srcset="img/gelendzhik-mobile.webp">
+
+                            <source media="(min-width: 1170px)" srcset="img/gelendzhik-desktop.jpg">
+                            <source media="(min-width: 790px)" srcset="img/gelendzhik-tablet.jpg">
+                            <img class="catalog-list__image" src="img/gelendzhik-mobile.jpg" alt="Фотография из круиза в Геленджик" width="290" height="229">
+                        </picture>
+                        <div class="catalog-list__description">
+                            <a href="/"><h3 class="catalog-list__title">Морская прогулка в&nbsp;Геленджик&nbsp;<svg class="catalog-list__svg"><use xlink:href="#icon-arrow-left"></use></svg></h3></a>
+                            <p class="catalog-list__route"><span class="catalog-list__route-title">Маршрут:</span> Сочи-Туапсе-Геленджик</p>
+                            <p class="catalog-list__duration"><span class="catalog-list__duration-title">Продолжительность:</span> 12 ч. 30 мин.</p>
+                            <div class="catalog-list__price-wrapper">
+                                <span class="catalog-list__price">7 000 руб.</span>
+                                <del class="catalog-list__old-price">10 000 руб.</del>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item">
+                        <picture>
+                            <source type="image/webp" media="(min-width: 1170px)" srcset="img/novorossiysk-desktop.webp">
+                            <source type="image/webp" media="(min-width: 790px)" srcset="img/novorossiysk-tablet.webp">
+                            <source type="image/webp" srcset="img/novorossiysk-mobile.webp">
+
+                            <source media="(min-width: 1170px)" srcset="img/novorossiysk-desktop.jpg">
+                            <source media="(min-width: 790px)" srcset="img/novorossiysk-tablet.jpg">
+                            <img class="catalog-list__image" src="img/novorossiysk-mobile.jpg" alt="Фотография из круиза в Новороссийск" width="290" height="229">
+                        </picture>
+                        <div class="catalog-list__description">
+                            <a href="/"><h3 class="catalog-list__title">Морской круиз в&nbsp;Новороссийск&nbsp;<svg class="catalog-list__svg"><use xlink:href="#icon-arrow-left"></use></svg></h3></a>
+                            <p class="catalog-list__route"><span class="catalog-list__route-title">Маршрут:</span> Сочи-Геленджик-Новороссйиск-Геленджик-Сочи</p>
+                            <p class="catalog-list__duration"><span class="catalog-list__duration-title">Продолжительность:</span> 13 ч. 0 мин.</p>
+                            <div class="catalog-list__price-wrapper">
+                                <span class="catalog-list__price">14 800 руб.</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-list__item">
+                        <picture>
+                            <source type="image/webp" srcset="img/sea-desktop.webp">
+
+                            <img class="catalog-list__image" src="img/sea-desktop.jpg" alt="Фотография из морской прогулки в Абрау Дюрсо" width="555" height="215">
+                        </picture>
+                        <div class="catalog-list__description">
+                            <a href="/"><h3 class="catalog-list__title">Морская прогулка в&nbsp;Абрау-Дюрсо&nbsp;<svg class="catalog-list__svg"><use xlink:href="#icon-arrow-left"></use></svg></h3></a>
+                            <p class="catalog-list__route"><span class="catalog-list__route-title">Маршрут:</span> Сочи-Абрау-Дюрсо</p>
+                            <p class="catalog-list__duration"><span class="catalog-list__duration-title">Продолжительность:</span> 11 ч. 0 мин.</p>
+                            <div class="catalog-list__price-wrapper">
+                                <span class="catalog-list__price">14 800 руб.</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a class="button catalog__btn" href="/">Больше круизов</a>
+            </section>
         </main>
 
         <script src="js/script.min.js"></script>

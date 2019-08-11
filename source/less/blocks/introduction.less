@@ -1,5 +1,7 @@
-.main {
+.introduction {
     position: relative;
+
+    width: 100%;
 
     background-color: @bg-introduction;
     background-image: url("../img/bg/sochi-bg-mobile.jpg");
@@ -9,7 +11,7 @@
     &::after {
         content: "";
         position: absolute;
-        top: 415px;
+        bottom: -45px;
         left: 50%;
         margin-left: -26.5px;
 
@@ -21,17 +23,17 @@
     }
 }
 
-.main__wrapper {
+.introduction__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main__logo {
+.introduction__logo {
     margin: 30px 0 0 0;
 }
 
-.main__header {
+.introduction__header {
     display: flex;
     flex-direction: column;
     max-width: 260px;
@@ -43,42 +45,38 @@
     text-align: center;
 }
 
-.main__header-highlight {
+.introduction__header-highlight {
     font-size: 50px;
     text-transform: uppercase;
 }
 
-.main__btn {
+.introduction__btn {
     margin-bottom: 210px;
 }
 
 @media (min-width: @tablet-width) {
-    .main {
+    .introduction {
         background-image: url("../img/bg/sochi-bg-tablet.jpg");
-
-        &::after{
-            top: 435px;
-        }
     }
 
-    .main__wrapper {
+    .introduction__wrapper {
         width: 790px;
         padding: 0 15px;
         margin: 0 auto;
     }
 
-    .main__logo {
+    .introduction__logo {
         margin: 145px 0 0 0;
     }
 
-    .main__header {
+    .introduction__header {
         max-width: unset;
         margin: 0 0 30px 0;
 
         font-size: 26px;
     }
 
-    .main__header-highlight {
+    .introduction__header-highlight {
         display: inline-block;
         vertical-align: middle;
         margin-top: 15px;
@@ -88,35 +86,35 @@
 }
 
 @media (min-width: @desktop-width) {
-    .main {
+    .introduction {
         background-image: url("../img/bg/sochi-bg-desktop.jpg");
 
-        &::after{
-            top: 450px;
+        &::after {
+            bottom: -85px;
         }
     }
 
-    .main__wrapper {
+    .introduction__wrapper {
         width: 1170px;
     }
 
-    .main__logo {
+    .introduction__logo {
         margin: 85px 0 0 0;
     }
 
-    .main__header {
+    .introduction__header {
         margin: 0 0 70px 0;
 
         font-size: 36px;
     }
 
-    .main__header-highlight {
+    .introduction__header-highlight {
         margin-top: 50px;
 
         font-size: 100px;
     }
 
-    .main__btn {
+    .introduction__btn {
         margin-bottom: 195px;
     }
 }
