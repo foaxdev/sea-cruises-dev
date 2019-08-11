@@ -47,7 +47,4 @@ function openModalWindow(arrButton, elModalWindow, btnClose) {
         evt.preventDefault();
         elModalWindow.classList.remove("modal--show");
     });
-
-    let arrSizes = elModalWindow.querySelectorAll(".modal__radio");
-    makeRadioButtonsAccessible(arrSizes, "modal__radio--selected", ".modal__radio-indicator",  true)
 }
