@@ -9,6 +9,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
     hideNavigation(btnToggle, elNavigation);
     addListenerForMenuButton(btnToggle, elNavigation);
+
+    let arrOrderButtons = document.querySelectorAll(".js-btn-order");
+    let elModalWindow = document.querySelector(".modal");
+    let btnClose = document.querySelector(".js-close");
+    openModalWindow(arrOrderButtons, elModalWindow, btnClose);
 });
 
 function hideNavigation(btnToggle, elNavigation) {
@@ -20,4 +25,29 @@ function addListenerForMenuButton(btnToggle, elNavigation) {
     btnToggle.addEventListener("click", function () {
         elNavigation.classList.toggle("menu-list--hidden");
     });
+}
+
+function openModalWindow(arrButton, elModalWindow, btnClose) {
+    for (let i = 0; i < arrButton.length; i++) {
+        arrButton[i].addEventListener("click", function (evt) {
+            if(document.body.clientWidth >= 750) {
+                evt.preventDefault();
+                elModalWindow.classList.add("modal--show");
+            }
+        });
+    }
+
+    document.addEventListener("keydown", function (evt) {
+        if (evt.key === "Escape") {
+            elModalWindow.classList.toggle("modal--show");
+        }
+    });
+
+    btnClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        elModalWindow.classList.remove("modal--show");
+    });
+
+    let arrSizes = elModalWindow.querySelectorAll(".modal__radio");
+    makeRadioButtonsAccessible(arrSizes, "modal__radio--selected", ".modal__radio-indicator",  true)
 }

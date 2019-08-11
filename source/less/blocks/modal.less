@@ -1,0 +1,128 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+
+    justify-content: space-between;
+    margin-left: -360px;
+    margin-top: -345px;
+    padding: 95px 30px 75px 65px;
+    width: 720px;
+
+    background-color: @white;
+
+    &--show {
+        display: flex;
+    }
+}
+
+.modal__button-close {
+    .hide-text();
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
+    width: 15px;
+    height: 17px;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    &::after,
+    &::before {
+        position: absolute;
+        content: "";
+        width: 22px;
+        height: 2px;
+        background-color: @bg-main-menu;
+        opacity: 0.5;
+        left: -2px;
+    }
+
+    &::after {
+        transform: rotate(45deg);
+    }
+
+    &::before {
+        transform: rotate(-45deg);
+    }
+}
+
+.modal__button-close:hover::after,
+.modal__button-close:hover::before,
+.modal__button-close:focus::after,
+.modal__button-close:focus::before {
+    opacity: 1;
+}
+
+.modal__button-close:active::after,
+.modal__button-close:active::before {
+    opacity: 0.3;
+}
+
+.modal__gallery {
+    width: 282px;
+}
+
+.modal__description {
+    width: 300px;
+}
+
+.modal__header {
+    margin: 0 70px 10px 0;
+
+    font-size: 18px;
+    color: @light-blue;
+}
+
+.modal__route,
+.modal__duration {
+    margin: 0;
+
+    font-family: "Raleway", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: @bg-main-menu;
+}
+
+.modal__route-title,
+.modal__duration-title {
+    font-weight: 700;
+}
+
+.modal__duration {
+    margin-bottom: 10px;
+}
+
+.modal__schedule-title {
+    margin: 0 0 10px 0;
+
+    font-family: "Raleway", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: @bg-main-menu;
+}
+
+.modal__text {
+    margin: 0;
+
+    font-family: "Raleway", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: @bg-main-menu;
+}
+
+.modal__price-wrapper {
+    margin: 30px 0 20px 0;
+}
+
+.modal__price {
+    font-size: 30px;
+    color: @bg-main-menu;
+}
