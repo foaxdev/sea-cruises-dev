@@ -2,11 +2,56 @@
     display: none;
 }
 
+.header__toggle--show {
+    .hide-text();
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 2;
+
+    display: block;
+    width: 22px;
+    height: 16px;
+
+    background-image: url("../img/toggle.svg");
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.header__wrapper {
+    position: relative;
+
+    width: 100%;
+
+    &--fixed {
+        width: 290px;
+        margin: 0 auto;
+    }
+}
+
 .header__lists-wrapper {
     display: none;
 }
 
 @media (min-width: @tablet-width) {
+    .header__wrapper {
+        &--fixed {
+            width: 750px;
+        }
+    }
+
     .header__lists-wrapper {
         position: relative;
         z-index: 1;
@@ -16,12 +61,30 @@
         width: 790px;
         padding: 0 15px;
         margin: 0 auto -60px auto;
+
+        &--fixed {
+            position: absolute;
+            top: 30px;
+            right: 0;
+
+            margin: 0 auto;
+        }
     }
 }
 
 @media (min-width: @desktop-width) {
+    .header__wrapper {
+        &--fixed {
+            width: 1170px;
+        }
+    }
+
     .header__lists-wrapper {
         width: 1170px;
         margin: 0 auto -70px auto;
+
+        &--fixed {
+            margin: 0 auto;
+        }
     }
 }

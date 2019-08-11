@@ -3,6 +3,16 @@
     padding: 45px 0 50px 0;
 
     background-color: @bg-main-menu;
+
+    &--hidden {
+        display: none;
+    }
+
+    &--block {
+        position: absolute;
+        z-index: 3;
+        top: 60px;
+    }
 }
 
 .menu-list__link {
@@ -23,5 +33,13 @@
 
     &:active {
         opacity: 0.5;
+    }
+}
+
+@media (min-width: @tablet-width) {
+    .menu-list {
+        &--block {
+            min-width: 420px;
+        }
     }
 }
