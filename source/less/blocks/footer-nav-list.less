@@ -1,0 +1,33 @@
+.footer-nav-list {
+    display: none;
+}
+
+@media (min-width: @tablet-width) {
+    .footer-nav-list {
+        .list-reset();
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-nav-list__link {
+        font-size: 14px;
+        color: @bg-main-menu;
+
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .footer-nav-list {
+        margin-right: 150px;
+    }
+}
