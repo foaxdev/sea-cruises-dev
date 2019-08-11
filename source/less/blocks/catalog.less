@@ -205,3 +205,49 @@
 .catalog__btn:active::after {
     border-top-color: @white;
 }
+
+@media (min-width: @tablet-width) {
+    .catalog {
+        padding: 35px 15px 60px 15px;
+        width: 750px;
+    }
+
+    .catalog__header {
+        font-size: 26px;
+    }
+
+    .catalog-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .catalog-list__item {
+        display: flex;
+        flex-direction: column;
+        width: 345px;
+        margin-bottom: 25px;
+    }
+
+    .catalog-list__item--hit::after,
+    .catalog-list__item--offer::after,
+    .catalog-list__item--discount::after {
+        right: 30px;
+    }
+
+    .catalog-list__image {
+        width: 100%;
+    }
+
+    .catalog-list__description {
+        padding: 30px 25px 40px 30px;
+        height: 100%;
+
+        background-color: @white;
+    }
+
+    .catalog-list__price-wrapper {
+        margin-top: auto;
+    }
+}
